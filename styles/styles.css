@@ -1,0 +1,78 @@
+/* ---------------------------- Reset Styles -------------------------------- */
+
+html {
+    box-sizing: border-box;
+    /* from normalize.css */
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+/* Remove gray background on active links in IE 10 */
+a {
+    background-color: transparent;
+}
+
+/* remove border on images inside links in IE 10 */
+img {
+    border-style: none;
+}
+
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button, input {
+    overflow: visible;
+}
+
+button, select {
+    text-transform: none;
+}
+
+/* Correct inability to style clickable types in iOS and Safari */
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+    -webkit-appearance: button;
+}
+
+
+legend {
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+
+/* Remove default vertical scrollbar in IE 10+ */
+textarea {
+    overflow: auto;
+}
+
+/* For IE 10 */
+[type='checkbox'],
+[type='radio'] {
+    padding: 0;
+}
+
+/* Correct the cursor style of increment and decrement buttons in Chrome */
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+    height: auto;
+}
+
