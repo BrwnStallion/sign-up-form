@@ -20,6 +20,11 @@ body {
 /* Remove gray background on active links in IE 10 */
 a {
     background-color: transparent;
+
+    /* Remove link styles */
+    &:link, &:visited, &:hover, &:active {
+        text-decoration: none;
+    }
 }
 
 /* remove border on images inside links in IE 10 */
