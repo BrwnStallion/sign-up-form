@@ -28,6 +28,12 @@ html {
     --fontClr: rgb(198 198 198);
     --fontSizeMain: 1.2rem;
     --fontSizeLabel: .8rem;
+    --clrGold01: rgb(132 103 73);
+    --clrGold02: rgb(109 84 62);
+    --clrBlue01: rgb(91 111 118);
+    --clrBlue02: rgb(55 71 70);
+    --clrGray01: rgb(53 56 47);
+    --clrGray02: rgb(43 50 43);
 }
 
 *,
@@ -162,7 +168,7 @@ body {
     
     font-family: var(--system-ui);
     font-size: var(--fontSize);
-    background-color: rgb(36, 36, 36);
+    background-color: var(--clrGray02);
     color: var(--fontClr);
     
     & .signup-text {
@@ -183,7 +189,7 @@ body {
 
             & .signup-fields {
                 padding: 1rem 2rem;
-                background-color: rgb(85 85 85);
+                background-color: var(--clrGold02);
     
                 & label {
                     font-size: var(--fontSizeLabel);
