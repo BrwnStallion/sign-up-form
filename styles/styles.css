@@ -81,3 +81,28 @@ textarea {
     height: auto;
 }
 
+/* ------------------------------ Styles ------------------------------------ */
+
+body {
+    display: flex;
+}
+
+.sidebar {
+    position: relative;
+
+    & img {
+        height: 100%;
+    }
+
+    & .logo {
+        width: 100%;
+        position: absolute;
+        top: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* left: 5rem; */
+        background-color: rgba(223, 223, 223, 0.678);
+
+    }
+}
