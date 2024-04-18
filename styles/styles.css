@@ -9,6 +9,11 @@ html {
 
 :root {
     font-size: 16px;
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    
+    /* Variables */
+    --fontClr: rgb(198 198 198);
 }
 
 *,
@@ -124,7 +129,7 @@ body {
         width: 100%;
         position: absolute;
         bottom: 0.2rem;
-        color: rgb(198 198 198);
+        color: var(--fontClr);
         text-align: center;
 
         & a {
@@ -132,6 +137,37 @@ body {
             &:link, &:visited, &:hover, &:active {
                 text-decoration: underline;
             }
+        }
+    }
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    font-family: var(--system-ui);
+    background-color: rgb(36, 36, 36);
+    color: var(--fontClr);
+    
+    & .signup-text {
+        margin-top: 14rem;
+        padding: 0 2rem;
+    }
+
+    & .signup-section {
+
+        & #signup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        & .signup-fields {
+            padding: 1rem 2rem;
+            background-color: rgb(85 85 85);
+        }
+        & .create-login {
+            padding: 1rem 2rem;
         }
     }
 }
