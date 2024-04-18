@@ -1,5 +1,17 @@
 /* ---------------------------- Reset Styles -------------------------------- */
 
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,
+a, em, img, strong, ol, ul, li,
+fieldset, form, label, legend, footer, header {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
 html {
     box-sizing: border-box;
     /* from normalize.css */
@@ -24,10 +36,6 @@ html {
 
 body, html {
     height: 100vh;
-}
-
-body {
-    margin: 0;
 }
 
 /* Remove gray background on active links in IE 10 */
@@ -71,7 +79,6 @@ button,
 [type='submit'] {
     -webkit-appearance: button;
 }
-
 
 legend {
     color: inherit;
