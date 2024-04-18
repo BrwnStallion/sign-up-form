@@ -2,7 +2,7 @@
 
 html, body, div, span,
 h1, h2, h3, h4, h5, h6, p,
-a, em, img, strong, ol, ul, li,
+a, img, strong, ol, ul, li,
 fieldset, form, label, legend, footer, header {
 	margin: 0;
 	padding: 0;
@@ -26,6 +26,8 @@ html {
     
     /* Variables */
     --fontClr: rgb(198 198 198);
+    --fontSizeMain: 1.2rem;
+    --fontSizeLabel: .8rem;
 }
 
 *,
@@ -105,6 +107,10 @@ textarea {
     height: auto;
 }
 
+h1, h2, h3, h4, h5 {
+    font-weight: bold;
+}
+
 /* ------------------------------ Styles ------------------------------------ */
 
 body {
@@ -152,14 +158,20 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    gap: 2rem;
     
     font-family: var(--system-ui);
+    font-size: var(--fontSize);
     background-color: rgb(36, 36, 36);
     color: var(--fontClr);
     
     & .signup-text {
         margin-top: 14rem;
         padding: 0 2rem;
+
+        & p:first-child {
+            margin-bottom: 1rem;
+        }
     }
 
     & .signup-section {
@@ -168,13 +180,20 @@ body {
             display: flex;
             flex-direction: column;
             gap: 2rem;
+
+            & .signup-fields {
+                padding: 1rem 2rem;
+                background-color: rgb(85 85 85);
+    
+                & label {
+                    font-size: var(--fontSizeLabel);
+                }
+            }
+
+            & .create-login {
+                padding: 0 2rem;
+            }
         }
-        & .signup-fields {
-            padding: 1rem 2rem;
-            background-color: rgb(85 85 85);
-        }
-        & .create-login {
-            padding: 1rem 2rem;
-        }
+        
     }
 }
