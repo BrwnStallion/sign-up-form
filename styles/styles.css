@@ -19,23 +19,6 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-:root {
-    font-size: 16px;
-    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    
-    /* Variables */
-    --fontClr: rgb(198 198 198);
-    --fontSizeMain: 1.2rem;
-    --fontSizeLabel: .8rem;
-    --clrGold01: rgb(132 103 73);
-    --clrGold02: rgb(109 84 62);
-    --clrBlue01: rgb(91 111 118);
-    --clrBlue02: rgb(55 71 70);
-    --clrGray01: rgb(53 56 47);
-    --clrGray02: rgb(43 50 43);
-}
-
 *,
 *:before,
 *:after {
@@ -117,6 +100,35 @@ h1, h2, h3, h4, h5 {
     font-weight: bold;
 }
 
+:root {
+    font-size: 16px;
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    
+    /* Variables */
+    --fontClr: rgb(198 198 198);
+    --fontSizeMain: 1.2rem;
+    --fontSizeLabel: .8rem;
+    --clrGold01: rgb(132 103 73);
+    --clrGold02: rgb(109 84 62);
+    --clrBlue01: rgb(91 111 118);
+    --clrBlue02: rgb(55 71 70);
+    --clrGray01: rgb(53 56 47);
+    --clrGray02: rgb(43 50 43);
+}
+
+/* Nazi germany style font / blackletter */
+@font-face {
+    font-family: bokor;
+    src: url(fonts/Bokor-Regular.ttf);
+}
+
+/* Slightly symbolic, very futuristic, sophisticated */
+@font-face {
+    font-family: megrim;
+    src: url(fonts/Megrim.ttf);
+}
+
 /* ------------------------------ Styles ------------------------------------ */
 
 body {
@@ -130,6 +142,9 @@ body {
     & > img {
         /* styles for main sidebar image */
         /* object-fit: contain; */
+        
+        /* size for main image */
+        width: 24rem;
         height: 100%;
     }
 
@@ -140,8 +155,22 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 1rem;
+
+        font-family: bokor;
+        font-size: 4rem;
         background-color: rgba(223, 223, 223, 0.404);
 
+        & > img {
+            /* size for icon image */
+            width: 8rem;
+            height: 100%;
+        }
+
+        & .name-stack {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     & .credits-footer {
