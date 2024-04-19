@@ -218,11 +218,41 @@ body {
             gap: 2rem;
 
             & .signup-fields {
+                display: flex;
+                flex-wrap: wrap;
+                
                 padding: 1rem 2rem;
                 background-color: var(--clrGold03);
-    
-                & label {
-                    font-size: var(--fontSizeLabel);
+
+                & h4 {
+                    /* To make the text take up the whole row */
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+
+                & div {
+                    /* Styles for the divs that contain labels & inputs */
+                    
+                    /* Width so that there are always two controls per row */
+                    width: 50%;
+                    
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+
+                    &:nth-of-type(3),
+                    &:nth-of-type(4) {
+                        /* Styles for middle row of divs to space out all rows */
+                        margin: 1rem 0;
+                    }
+
+                    & input {
+                        width: 12rem;
+                    }
+                    
+                    & label {
+                        font-size: var(--fontSizeLabel);
+                    }
                 }
             }
 
