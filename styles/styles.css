@@ -111,6 +111,7 @@ h1, h2, h3, h4, h5 {
     --fontSizeLabel: .8rem;
     --clrGold01: rgb(132 103 73);
     --clrGold02: rgb(109 84 62);
+    --clrGold03: rgb(57 60 53);
     --clrBlue01: rgb(91 111 118);
     --clrBlue02: rgb(55 71 70);
     --clrGray01: rgb(53 56 47);
@@ -218,7 +219,7 @@ body {
 
             & .signup-fields {
                 padding: 1rem 2rem;
-                background-color: var(--clrGold02);
+                background-color: var(--clrGold03);
     
                 & label {
                     font-size: var(--fontSizeLabel);
