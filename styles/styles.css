@@ -17,6 +17,9 @@ html {
     /* from normalize.css */
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
+    
+    /* Temporary styles */
+    background-color: orange;
 }
 
 *,
@@ -138,6 +141,8 @@ body {
 
 .sidebar {
     position: relative;
+    height: 100%;
+    width: calc(100vh * (9/16));
     /* background-color: gray; */
 
     & > img {
@@ -145,7 +150,7 @@ body {
         /* object-fit: contain; */
         
         /* size for main image */
-        width: 24rem;
+        /* width: 24rem; */
         height: 100%;
     }
 
@@ -196,6 +201,9 @@ body {
     justify-content: flex-start;
     gap: 2rem;
     
+    height: 100%;
+    width: 100%;
+
     font-family: var(--system-ui);
     font-size: var(--fontSize);
     background-color: var(--clrGray02);
