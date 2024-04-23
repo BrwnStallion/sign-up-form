@@ -151,18 +151,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* height: 100%; */
     width: calc(100vh * (9/16));
-    /* background-color: gray; */
-
-    & > img {
-        /* styles for main sidebar image */
-        /* object-fit: contain; */
-        
-        /* size for main image */
-        /* width: 24rem; */
-        height: 100%;
-    }
 
     & .logo {
         width: 100%;
