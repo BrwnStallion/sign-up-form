@@ -163,13 +163,13 @@ body {
         gap: 1rem;
 
         font-family: bokor;
-        font-size: 4rem;
+        font-size: 3.3rem;
         background-color: rgba(223, 223, 223, 0.404);
 
         & > img {
             /* size for icon image */
-            width: 8rem;
-            height: 100%;
+            width: 7.5rem;
+            min-height: 100%;
         }
 
         & .name-stack {
