@@ -17,9 +17,6 @@ html {
     /* from normalize.css */
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
-    
-    /* Temporary styles */
-    background-color: orange;
 }
 
 *,
@@ -136,13 +133,25 @@ h1, h2, h3, h4, h5 {
 
 /* ------------------------------ Styles ------------------------------------ */
 
+html,
+body,
+.sidebar,
+.main-section {
+    background-color: var(--clrGray02);
+}
+
 body {
     display: flex;
 }
 
 .sidebar {
     position: relative;
-    height: 100%;
+    
+    background-image: url(../img/dark-factory-4.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* height: 100%; */
     width: calc(100vh * (9/16));
     /* background-color: gray; */
 
@@ -207,7 +216,6 @@ body {
 
     font-family: var(--system-ui);
     font-size: var(--fontSize);
-    background-color: var(--clrGray02);
     color: var(--fontClr);
     
     & .signup-text {
