@@ -28,9 +28,13 @@ html {
     box-sizing: inherit;
 }
 
-body, html {
-    height: 100vh;
+html {
+    height: 100%;
     /* width: 100vw; */
+}
+
+body {
+    min-height: 100%;
 }
 
 /* Remove gray background on active links in IE 10 */
