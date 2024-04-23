@@ -17,9 +17,6 @@ html {
     /* from normalize.css */
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
-    
-    /* Temporary styles */
-    background-color: orange;
 }
 
 *,
@@ -140,24 +137,26 @@ h1, h2, h3, h4, h5 {
 
 /* ------------------------------ Styles ------------------------------------ */
 
+html,
+body,
+.sidebar,
+.main-section {
+    background-color: var(--clrGray02);
+}
+
 body {
     display: flex;
 }
 
 .sidebar {
     position: relative;
-    height: 100%;
+    display: flex;
+    
+    background-image: url(../img/dark-factory-4.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: calc(100vh * (9/16));
-    /* background-color: gray; */
-
-    & > img {
-        /* styles for main sidebar image */
-        /* object-fit: contain; */
-        
-        /* size for main image */
-        /* width: 24rem; */
-        height: 100%;
-    }
 
     & .logo {
         width: 100%;
@@ -169,13 +168,13 @@ body {
         gap: 1rem;
 
         font-family: bokor;
-        font-size: 4rem;
+        font-size: 3.3rem;
         background-color: rgba(223, 223, 223, 0.404);
 
         & > img {
             /* size for icon image */
-            width: 8rem;
-            height: 100%;
+            width: 7.5rem;
+            min-height: 100%;
         }
 
         & .name-stack {
@@ -186,8 +185,8 @@ body {
 
     & .credits-footer {
         width: 100%;
-        position: absolute;
-        bottom: 0.2rem;
+        align-self: flex-end;
+
         color: var(--fontClr);
         text-align: center;
 
@@ -211,7 +210,6 @@ body {
 
     font-family: var(--system-ui);
     font-size: var(--fontSize);
-    background-color: var(--clrGray02);
     color: var(--fontClr);
     
     & .signup-text {
