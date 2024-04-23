@@ -146,6 +146,7 @@ body {
 
 .sidebar {
     position: relative;
+    display: flex;
     
     background-image: url(../img/dark-factory-4.jpg);
     background-size: cover;
@@ -180,8 +181,8 @@ body {
 
     & .credits-footer {
         width: 100%;
-        position: absolute;
-        bottom: 0.2rem;
+        align-self: flex-end;
+
         color: var(--fontClr);
         text-align: center;
 
