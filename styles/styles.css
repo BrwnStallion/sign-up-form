@@ -156,7 +156,8 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: max(300px, 30%);
+
+    min-width: max(200px, 30vw);
 
     & .banner {
         width: 100%;
