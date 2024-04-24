@@ -173,7 +173,7 @@ body {
 
         & > img {
             /* size for icon image */
-            width: 7.5rem;
+            width: max(60px, 8vw);
             min-height: 100%;
         }
 
@@ -182,8 +182,7 @@ body {
             flex-direction: column;
 
             font-family: bokor;
-            /* font-size: max(3.3rem, 10%); */
-            font-size: 500%;
+            font-size: max(32px, 5vw);
         }
     }
 
