@@ -114,6 +114,7 @@ h1, h2, h3, h4, h5 {
     --fontClr: rgb(198 198 198);
     --fontSizeMain: 1.2rem;
     --fontSizeLabel: .8rem;
+    --fontSizeCredits: .8rem;
     --clrGold01: rgb(132 103 73);
     --clrGold02: rgb(109 84 62);
     --clrGold03: rgb(57 60 53);
@@ -192,6 +193,7 @@ body {
 
         color: var(--fontClr);
         text-align: center;
+        font-size: var(--fontSizeCredits);
 
         & a {
 
