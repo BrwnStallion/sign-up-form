@@ -156,7 +156,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: calc(100vh * (9/16));
+    width: max(300px, 30%);
 
     & .logo {
         width: 100%;
@@ -206,9 +206,6 @@ body {
     justify-content: flex-start;
     gap: 2rem;
     
-    height: 100%;
-    width: 100%;
-
     font-family: var(--system-ui);
     font-size: var(--fontSize);
     color: var(--fontClr);
@@ -246,17 +243,11 @@ body {
                     /* Styles for the divs that contain labels & inputs */
                     
                     /* Width so that there are always two controls per row */
-                    width: 50%;
+                    width: max(225px, 50%);
+                    margin-bottom: 1rem;
                     
                     display: flex;
                     flex-direction: column;
-                    flex-wrap: wrap;
-
-                    &:nth-of-type(3),
-                    &:nth-of-type(4) {
-                        /* Styles for middle row of divs to space out all rows */
-                        margin: 1rem 0;
-                    }
 
                     & input {
                         width: max(12rem, 20vw);
