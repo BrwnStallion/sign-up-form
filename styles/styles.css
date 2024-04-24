@@ -167,9 +167,6 @@ body {
         align-items: center;
         gap: 1rem;
 
-        font-family: bokor;
-        /* font-size: max(3.3rem, 10%); */
-        font-size: 500%;
         background-color: rgba(223, 223, 223, 0.404);
 
         & > img {
@@ -181,6 +178,10 @@ body {
         & .name-stack {
             display: flex;
             flex-direction: column;
+
+            font-family: bokor;
+            /* font-size: max(3.3rem, 10%); */
+            font-size: 500%;
         }
     }
 
