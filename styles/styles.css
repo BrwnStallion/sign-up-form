@@ -125,7 +125,7 @@ h1, h2, h3, h4, h5 {
     --clrGray02: rgb(43 50 43);
     --clrInvalid: rgb(255, 26, 26);
     --clrValid: rgb(139 195 74);
-    --borderRadius: 3px;
+    --borderRadius: 4px;
 }
 
 /* Nazi germany style font / blackletter */
