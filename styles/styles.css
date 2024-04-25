@@ -123,7 +123,8 @@ h1, h2, h3, h4, h5 {
     --clrBlue02: rgb(55 71 70);
     --clrGray01: rgb(53 56 47);
     --clrGray02: rgb(43 50 43);
-    --clrInvalid: rgb(255, 26, 26);
+    --clrInvalidBrdr: rgb(255, 26, 26);
+    --clrInvalidFont: rgb(211, 6, 6);
     --clrValid: rgb(139 195 74);
     --borderRadius: 4px;
 }
@@ -265,8 +266,8 @@ body {
                         font-size: var(--fontSizeInput);
 
                         &:invalid {
-                            border: 2px solid var(--clrInvalid);
-                            color: var(--clrInvalid);
+                            border: 2px solid var(--clrInvalidBrdr);
+                            color: var(--clrInvalidFont);
                             box-shadow: none;
                         }
 
