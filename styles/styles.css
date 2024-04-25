@@ -113,8 +113,9 @@ h1, h2, h3, h4, h5 {
     /* Variables */
     --fontClr: rgb(198 198 198);
     --fontSizeMain: 1.2rem;
-    --fontSizeLabel: .8rem;
+    --fontSizeLabel: .9rem;
     --fontSizeCredits: .8rem;
+    --fontSizeInput: 1.2rem;
     --clrGold01: rgb(132 103 73);
     --clrGold02: rgb(109 84 62);
     --clrGold03: rgb(57 60 53);
@@ -122,6 +123,9 @@ h1, h2, h3, h4, h5 {
     --clrBlue02: rgb(55 71 70);
     --clrGray01: rgb(53 56 47);
     --clrGray02: rgb(43 50 43);
+    --clrInvalid: rgb(255, 26, 26);
+    --clrValid: rgb(139 195 74);
+    --borderRadius: 3px;
 }
 
 /* Nazi germany style font / blackletter */
@@ -253,9 +257,29 @@ body {
 
                     & input {
                         width: max(12rem, 20vw);
+
+                        background-color: #FFFFFF;
+                        border: 1px solid orange;
+                        border-radius: var(--borderRadius);
+                        font-size: var(--fontSizeInput);
+
+                        &:invalid {
+                            border: 2px solid var(--clrInvalid);
+                            color: var(--clrInvalid);
+                            box-shadow: none;
+                        }
+
+                        &:valid {
+                            border: 2px solid var(--clrValid);
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
                     }
                     
                     & label {
+                        margin-bottom: .1rem;
                         font-size: var(--fontSizeLabel);
                     }
                 }
