@@ -127,6 +127,7 @@ h1, h2, h3, h4, h5 {
     --clrInvalidFont: rgb(211, 6, 6);
     --clrValid: rgb(139 195 74);
     --borderRadius: 4px;
+    --inputWidth: max(12rem, 20vw);
 }
 
 /* Nazi germany style font / blackletter */
@@ -257,7 +258,7 @@ body {
                     flex-direction: column;
 
                     & input {
-                        width: max(12rem, 20vw);
+                        width: var(--inputWidth);
                         padding: 1.1rem .6rem .8rem;
 
                         background-color: #e6e6e6;
@@ -283,6 +284,7 @@ body {
                     & label {
                         margin-bottom: .1rem;
                         font-size: var(--fontSizeLabel);
+                        width: var(--inputWidth);
                     }
                 }
             }
