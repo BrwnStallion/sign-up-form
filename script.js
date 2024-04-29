@@ -22,7 +22,7 @@
 const inputControls = document.querySelectorAll('input');
 const signupDiv = document.querySelector('.signup-section');
 signupDiv.addEventListener('focusin', (e) => {
-    if (e.target.nodeName === 'INPUT') {
+    if (e.target.nodeName === 'INPUT' && e.target.id !== 'phone') {
         e.target.setAttribute('required', 'required');
     };
 });
