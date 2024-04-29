@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5 {
     --clrInvalidFont: rgb(211, 6, 6);
     --clrValid: rgba(139, 195, 74, 0.8);
     --clrNormalBrdr: rgba(94, 94, 94, 0.5);
-    --clrFocusBrdr: rgba(76, 219, 255, 0.589);
+    --clrFocusBrdr: rgba(110, 180, 238, 0.589);
     --borderRadius: 4px;
     --inputWidth: max(12rem, 20vw);
 }
