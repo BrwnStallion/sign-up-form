@@ -268,18 +268,39 @@ body {
                         border-radius: var(--borderRadius);
                         font-size: var(--fontSizeInput);
 
+                        & + span {
+                            /* Styles for all spans immediately after input */
+                            position: relative;
+
+                            &::before {
+                                position: absolute;
+                                left: calc(var(--inputWidth) + 0.5rem);
+                                bottom: 1rem;
+                            }
+                        }
+
                         &[required='required']:invalid {
                             /* These styles only affect when JS has added
                             'required' to the input node */
                             border: 2px solid var(--clrInvalidBrdr);
                             color: var(--clrInvalidFont);
                             box-shadow: none;
+
+                            & + span::before {
+                                content: '✖';
+                                color: red;
+                            }
                         }
 
                         &[required='required']:valid {
                             /* These styles only affect when JS has added
                             'required' to the input node */
                             border: 2px solid var(--clrValid);
+
+                            & + span::before {
+                                content: '✓';
+                                color: rgb(0, 255, 0);
+                            }
                         }
 
                         &:focus {
