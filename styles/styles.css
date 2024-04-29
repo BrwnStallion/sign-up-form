@@ -123,9 +123,9 @@ h1, h2, h3, h4, h5 {
     --clrBlue02: rgb(55 71 70);
     --clrGray01: rgb(53 56 47);
     --clrGray02: rgb(43 50 43);
-    --clrInvalidBrdr: rgb(255, 26, 26);
+    --clrInvalidBrdr: rgba(255, 26, 26, 0.8);
     --clrInvalidFont: rgb(211, 6, 6);
-    --clrValid: rgb(139 195 74);
+    --clrValid: rgba(139, 195, 74, 0.8);
     --clrNormalBrdr: rgba(94, 94, 94, 0.5);
     --clrFocusBrdr: rgba(76, 219, 255, 0.589);
     --borderRadius: 4px;
