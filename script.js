@@ -21,7 +21,6 @@
 
 const inputControls = document.querySelectorAll('input');
 const signupDiv = document.querySelector('.signup-section');
-let control;
 signupDiv.addEventListener('focusin', (e) => {
     if (e.target.nodeName === 'INPUT') {
         e.target.setAttribute('required', 'required');
