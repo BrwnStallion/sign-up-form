@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5 {
     --clrInvalidFont: rgb(211, 6, 6);
     --clrValid: rgba(139, 195, 74, 0.8);
     --clrNormalBrdr: rgba(94, 94, 94, 0.5);
-    --clrFocusBrdr: rgba(110, 180, 238, 0.589);
+    --clrFocusBrdr: rgba(105, 186, 252, 0.644);
     --borderRadius: 4px;
     --inputWidth: max(12rem, 20vw);
 }
@@ -263,11 +263,22 @@ body {
                         width: var(--inputWidth);
                         padding: 1.1rem .6rem .8rem;
 
-                        background-color: #e6e6e6;
-                        border: 2px solid var(--clrNormalBrdr);
+                        background-color: rgb(255 255 255);
+                        border: 3px solid var(--clrNormalBrdr);
                         border-radius: var(--borderRadius);
+                        box-shadow: inset 1px 1px 3px rgb(184 184 184);
                         font-size: var(--fontSizeInput);
 
+                        &:hover,
+                        &:focus {
+                            background-color: rgb(216, 216, 216);
+                        }
+
+                        &:focus {
+                            outline: none;
+                            border: 3px solid var(--clrFocusBrdr);
+                        }
+                        
                         & + span {
                             /* Styles for all spans immediately after input */
                             position: relative;
@@ -282,9 +293,9 @@ body {
                         &[required='required']:invalid {
                             /* These styles only affect when JS has added
                             'required' to the input node */
-                            border: 2px solid var(--clrInvalidBrdr);
+                            /* border: 3px solid var(--clrInvalidBrdr); */
                             color: var(--clrInvalidFont);
-                            box-shadow: none;
+                            /* box-shadow: none; */
 
                             & + span::before {
                                 content: '✖';
@@ -295,17 +306,11 @@ body {
                         &[required='required']:valid {
                             /* These styles only affect when JS has added
                             'required' to the input node */
-                            border: 2px solid var(--clrValid);
 
                             & + span::before {
                                 content: '✓';
                                 color: rgb(0, 255, 0);
                             }
-                        }
-
-                        &:focus {
-                            outline: none;
-                            border: 2px solid var(--clrFocusBrdr);
                         }
                     }
                     
