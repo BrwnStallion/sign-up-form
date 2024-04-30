@@ -6,6 +6,13 @@ Sign-Up Form Laundry List
 - Add tooltips or some direction to the user about what the restrictions are on
   input
 - Add JS password verification (for same password in each field)
+- Consider adding required/optional tag/note to fields markup/CSS for UX
+- Consider adding password guidance popup markup
+    - Can use the x and check icons
+    - Can use JS to apply the styles if conditions are met (regex would be in
+      JS)
+    - Need to make sure that the markup wouldn't move around in a weird way
+- Add styles to the button
 
 04/29/24
 - Add regex pattern for last name
