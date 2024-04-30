@@ -326,16 +326,24 @@ body {
                 padding: 0 2rem;
 
                 & button {
+                    margin-bottom: 1.5rem;
                     padding: .7rem 1.4rem;
                     border-radius: .4rem;
                     background-color: rgb(210 200 180);
                     border: none;
+
+                    font-weight: 700;
 
                     &:hover {
                         background-color: rgb(180, 170, 150);
                         box-shadow: inset 1px 1px 3px;
                         cursor: pointer;
                     }
+                }
+
+                & a {
+                    font-weight: bold;
+                    color: rgb(209, 187, 143);
                 }
             }
         }
