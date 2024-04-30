@@ -9,10 +9,16 @@ Sign-Up Form Laundry List
 - Consider adding required/optional tag/note to fields markup/CSS for UX
 - Consider adding password guidance popup markup
     - Can use the x and check icons
+        - COMPLETE
     - Can use JS to apply the styles if conditions are met (regex would be in
       JS)
+        - JS can apply success or fail to the relevant div
     - Need to make sure that the markup wouldn't move around in a weird way
+        - inputHeight(--fontSizeInput + --inputPadTop + --inputPadBtm + 6px[border]) + --fontSizeLabel + rqmtHeight(--fontSizeLabel * 3) + desired padding
+        - COMPLETE
 - Add styles to the button
+    - COMPLETE
+- Rework focus border to make its colors more consistent with the palate
 
 04/29/24
 - Add regex pattern for last name
