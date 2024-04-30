@@ -130,7 +130,8 @@ h1, h2, h3, h4, h5 {
     --clrValid: rgba(139, 195, 74, 0.8);
     --clrValidCheck: rgb(0, 255, 0);
     --clrNormalBrdr: rgba(94, 94, 94, 0.5);
-    --clrFocusBrdr: rgba(105, 186, 252, 0.644);
+    --clrFocusBrdr01: rgba(105, 186, 252, 0.644);
+    --clrFocusBrdr02: rgba(122, 122, 122, 0.74);
     /* Sizes */
     --borderRadius: 4px;
     --borderThick: 3px;
@@ -272,20 +273,20 @@ body {
                         padding: var(--inputPadTop) .6rem var(--inputPadBtm);
 
                         background-color: rgb(255 255 255);
-                        border: var(--borderThick) solid var(--clrNormalBrdr);
+                        border: var(--borderThick) solid var(--clrGold03);
                         border-radius: var(--borderRadius);
-                        box-shadow: inset 1px 1px 3px rgb(184 184 184);
+                        box-shadow: inset 1px 1px 3px rgb(185 185 185);
                         font-size: var(--fontSizeInput);
 
                         &:hover,
                         &:focus {
-                            background-color: rgb(216, 216, 216);
+                            background-color: rgb(224, 224, 224);
                         }
 
                         &:focus {
                             outline: none;
                             border: var(--borderThick)
-                                solid var(--clrFocusBrdr);
+                                solid var(--clrFocusBrdr01);
                         }
                         
                         & + span {
