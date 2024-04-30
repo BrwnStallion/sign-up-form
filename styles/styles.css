@@ -249,7 +249,7 @@ body {
                     margin-bottom: 1rem;
                 }
 
-                & div {
+                & > div {
                     /* Styles for the divs that contain labels & inputs */
                     
                     /* Width so that there are always two controls per row */
@@ -318,6 +318,11 @@ body {
                         margin-bottom: .1rem;
                         font-size: var(--fontSizeLabel);
                         width: var(--inputWidth);
+                    }
+
+                    & > div {
+                        /* styles for password information */
+                        font-size: var(--fontSizeLabel);
                     }
                 }
             }
