@@ -325,13 +325,21 @@ body {
                     }
 
                     &.password {
-                        /* padding-bottom: calc(var(--fontSizeLabel) * 3
-                        + var(--marginRqmtTop)); */
-                        min-height: 9rem;
+                        /* calculation for password div so that it doesn't
+                        resize when the reqmt texts are added */
+                        min-height: calc( var(--fontSizeLabel)*4
+                        + var(--borderThick)*2 + var(--inputPadTop)
+                        + var(--inputPadBtm) + var(--fontSizeInput)
+                        + 2rem );
                     }
 
                     &.password-confirmation {
-                        min-height: 6.5rem;
+                        /* calculation for confirmation div so that it doesn't
+                        resize when the reqmt text is added */
+                        min-height: calc( var(--fontSizeLabel)*2
+                        + var(--borderThick)*2 + var(--inputPadTop)
+                        + var(--inputPadBtm) + var(--fontSizeInput)
+                        + 1.5rem );
                     }
 
                     & > div {
