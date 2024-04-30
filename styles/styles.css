@@ -131,6 +131,7 @@ h1, h2, h3, h4, h5 {
     --clrFocusBrdr: rgba(105, 186, 252, 0.644);
     --borderRadius: 4px;
     --inputWidth: max(12rem, 20vw);
+    --marginRqmtTop: 1rem;
 }
 
 /* Nazi germany style font / blackletter */
@@ -255,7 +256,7 @@ body {
                     
                     /* Width so that there are always two controls per row */
                     width: max(225px, 50%);
-                    margin-bottom: 1rem;
+                    margin-top: var(--marginRqmtTop);
                     
                     display: flex;
                     flex-direction: column;
@@ -319,6 +320,16 @@ body {
                         margin-bottom: .1rem;
                         font-size: var(--fontSizeLabel);
                         width: var(--inputWidth);
+                    }
+
+                    &.password {
+                        /* padding-bottom: calc(var(--fontSizeLabel) * 3
+                        + var(--marginRqmtTop)); */
+                        min-height: 9rem;
+                    }
+
+                    &.password-confirmation {
+                        min-height: 6.5rem;
                     }
 
                     & > div {
