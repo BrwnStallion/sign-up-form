@@ -324,6 +324,19 @@ body {
 
             & .create-login {
                 padding: 0 2rem;
+
+                & button {
+                    padding: .7rem 1.4rem;
+                    border-radius: .4rem;
+                    background-color: rgb(210 200 180);
+                    border: none;
+
+                    &:hover {
+                        background-color: rgb(180, 170, 150);
+                        box-shadow: inset 1px 1px 3px;
+                        cursor: pointer;
+                    }
+                }
             }
         }
         
