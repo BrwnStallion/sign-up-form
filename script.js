@@ -31,61 +31,62 @@
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Functions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 function addRqmtDivs() {
-  // Creates and appends the divs for password requirements
+    // Creates and appends the divs for password requirements
 
-  // Grab password input parent div element
-  const pwrdDiv = document.querySelector('.password');
+    // Grab password input parent div element
+    const pwrdDiv = document.querySelector('.password');
 
-  // Array for new pwrd reqmt elements
-  const pwrdReqDivs = [];
-  pwrdReqDivs.length = 3;
+    // Array for new pwrd reqmt elements
+    const pwrdReqDivs = [];
+    pwrdReqDivs.length = 3;
 
-  for (let i = 0; i < 3; i++) {
-    pwrdReqDivs[i] = document.createElement('div');
-  };
+    for (let i = 0; i < 3; i++) {
+        pwrdReqDivs[i] = document.createElement('div');
+    };
 
-  pwrdReqDivs[0].textContent = 'At least 8 characters';
-  pwrdReqDivs[1].textContent = 'At least 1 capital letter';
-  pwrdReqDivs[2].textContent = 'At least 1 number';
+    pwrdReqDivs[0].textContent = 'At least 8 characters';
+    pwrdReqDivs[1].textContent = 'At least 1 capital letter';
+    pwrdReqDivs[2].textContent = 'At least 1 number';
 
-  pwrdReqDivs.forEach((div) => {
-    pwrdDiv.appendChild(div);
-  });
+    pwrdReqDivs.forEach((div) => {
+        pwrdDiv.appendChild(div);
+    });
 }
 
 function addMatchDiv() {
-  // Creates and appends the div for matching password confirmation
+    // Creates and appends the div for matching password confirmation
 
-  // Grab confirmation element, create & append match rqmt element
-  const pwrdConfDiv = document.querySelector('.password-confirmation');
-  const matchDiv = document.createElement('div');
-  matchDiv.textContent = 'Passwords must match';
-  pwrdConfDiv.appendChild(matchDiv);
+    // Grab confirmation element, create & append match rqmt element
+    const pwrdConfDiv = document.querySelector('.password-confirmation');
+    const matchDiv = document.createElement('div');
+    matchDiv.textContent = 'Passwords must match';
+    pwrdConfDiv.appendChild(matchDiv);
 }
 
 function toggleSuccessClass(divNumber, direction) {
-  // Add/remove .success class to specified password rqmt div
-  // Note: this doesn't create duplicate classes
+    // Add/remove .success class to specified password rqmt div
+    // Note: this doesn't create duplicate classes
 
-  /*
-  divNumber ranges from 0 to 3, correlating to which of the 4 possible divs
-  needs to be changed to success.
-  'direction' is 0 or 1 corresponding to add or remove
-  */
+    /*
+    divNumber ranges from 0 to 3, correlating to which of the 4 possible divs
+    needs to be changed to success.
+    'direction' is 0 or 1 corresponding to add or remove
+    */
 
-  if (divNumber >= 0 && divNumber < 4) {
-    const allRqmtDivs = document.querySelectorAll('.signup-fields > div div');
-    console.log(allRqmtDivs);
+    if (divNumber >= 0 && divNumber < 4) {
+        const allRqmtDivs = document
+            .querySelectorAll('.signup-fields > div div');
+        console.log(allRqmtDivs);
 
-    switch (direction) {
-      case 1:
-        allRqmtDivs[divNumber].classList.add('success');
-      break;
-      case 0:
-        allRqmtDivs[divNumber].classList.remove('success');
-      break;
+        switch (direction) {
+            case 1:
+                allRqmtDivs[divNumber].classList.add('success');
+            break;
+            case 0:
+                allRqmtDivs[divNumber].classList.remove('success');
+            break;
+        };
     };
-  };
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Execution ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -102,29 +103,33 @@ addRqmtDivs();
 addMatchDiv();
 
 signupDiv.addEventListener('keyup', (e) => {
-  if (e.target.id === 'password') {
-    
-    // Get the value in the field
-    let fieldValue = e.target.value;
+    if (e.target.id === 'password') {
 
-    // Check if the values match against the regex requirement
-  } else if (e.target.id ==='password-conf') {
-    // Get the value in the field
-    let fieldValue = e.target.value;
+        // Get the value in the field
+        let fieldValue = e.target.value;
 
-    // Check if the value matches what's in the password field
-    if (fieldValue === document.querySelector('#password').value) {
-      console.log('same value');
-      // Show success because they match
-      toggleSuccessClass(3,1);
+        // Check if the values match against the regex requirement
 
-    } else {
-      
-      // Otherwise remove success class (whether it's present or not)
-      toggleSuccessClass(3,0);
+        // Check if confirm field matches (if going back and editing)
+        // Only do this if confirm field is not blank
 
+    } else if (e.target.id ==='password-conf') {
+        // Get the value in the field
+        let fieldValue = e.target.value;
+
+        // Check if the value matches what's in the password field
+        if (fieldValue === document.querySelector('#password').value) {
+
+            // Show success because they match
+            toggleSuccessClass(3,1);
+
+        } else {
+
+            // Otherwise remove success class (whether it's present or not)
+            toggleSuccessClass(3,0);
+
+        };
     };
-  };
 });
 
 const inputElement = document.querySelector('#password');
