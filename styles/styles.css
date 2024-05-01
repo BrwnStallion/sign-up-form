@@ -228,6 +228,7 @@ body {
     
     & .signup-text {
         padding: 0 2rem;
+        line-height: 1.5;
 
         & p:first-child {
             margin-bottom: 1rem;
