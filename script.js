@@ -90,7 +90,7 @@ function toggleSuccessClass(divNumber, direction) {
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Execution ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-const signupDiv = document.querySelector('.signup-section');
+const signupDiv = document.querySelector('.signup-fields');
 signupDiv.addEventListener('focusin', (e) => {
     if (e.target.nodeName === 'INPUT' && e.target.id !== 'phone') {
         e.target.setAttribute('required', 'required');
