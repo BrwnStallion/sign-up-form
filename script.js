@@ -106,6 +106,7 @@ signupDiv.addEventListener('keyup', (e) => {
     const pwrdValue = document.querySelector('#password').value;
     const confirmValue = document.querySelector('#password-conf').value;
 
+    // Do rqmt checks only if the password fields are being typed in
     if (e.target.id === 'password' || e.target.id === 'password-conf') {
 
         // Check if the values match against the regex requirement
