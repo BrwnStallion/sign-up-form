@@ -111,19 +111,20 @@ signupDiv.addEventListener('keyup', (e) => {
         // Check if the values match against the regex requirement
 
 
-        let bothFieldsBlank = confirmValue !== '' && pwrdValue !== '';
-
+        let anyFieldBlank = confirmValue === '' || pwrdValue === '';
+        console.log(anyFieldBlank);
+        console.log(pwrdValue);
+        console.log(confirmValue);
         /*
         Check if pwrd value matches confirm value. Only do this if the fields
         are not blank
         */
-        if (pwrdValue === confirmValue && !bothFieldsBlank) {
+        if (pwrdValue === confirmValue && !anyFieldBlank) {
 
             // Show success because they match
             toggleSuccessClass(3,1);
 
-        } else if (pwrdValue !== confirmValue && !bothFieldsBlank) {
-
+        } else if (pwrdValue !== confirmValue && !anyFieldBlank) {
             /*
             Grab the index of the last div (which is the matching div)
             Need to do this because the first 3 divs might not be created
