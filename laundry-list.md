@@ -1,5 +1,15 @@
 Sign-Up Form Laundry List
 
+05/01/24
+- Add JS password verification (for same password in each field)
+- Consider adding required/optional tag/note to fields markup/CSS for UX
+- Consider adding password guidance popup markup
+- Can use JS to apply the styles if conditions are met (regex would be in
+      JS)
+        - JS can apply success or fail to the relevant div
+- Rework focus border to make its colors more consistent with the palate
+- Increase the line spacing maybe for the intro text
+
 04/30/24
 - Add regex pattern for passwords
 - Figure out why email pattern accepts input w/o a domain
@@ -14,7 +24,9 @@ Sign-Up Form Laundry List
       JS)
         - JS can apply success or fail to the relevant div
     - Need to make sure that the markup wouldn't move around in a weird way
-        - inputHeight(--fontSizeInput + --inputPadTop + --inputPadBtm + 6px[border]) + --fontSizeLabel + rqmtHeight(--fontSizeLabel * 3) + desired padding
+        - inputHeight(--fontSizeInput + --inputPadTop + --inputPadBtm
+          + 6px[border]) + --fontSizeLabel + rqmtHeight(--fontSizeLabel * 3)
+          + desired padding
         - COMPLETE
 - Add styles to the button
     - COMPLETE
