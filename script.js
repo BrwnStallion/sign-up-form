@@ -9,13 +9,17 @@
       already defined
 
 - When user begins to input into password fields:
-   - Add the 3 or 1 divs with rqmt text. Add the red x content
+   - Add the 3 or 1 divs with rqmt text
+      - These actions should be moved into functions
    - Apply .fail and remove .success
+      - Could just toggle .success and not do .fail, which could be default
    - Check if their input matches the 3 or 1 criteria (8 char, 1 capital, 1 num
      or matching)
-   - If content doesn't match on any of the criteria, add the .fail class, and
-     remove .success class
-   - If content matches on any of the criteria, add .success and remove .fail
+        - Can have a listener for keypresses. Checks input against regex for
+          each rqmt
+   - If content doesn't match on any of the criteria remove .success class
+      - Toggle could cause problems because we want .success to not be present
+   - If content matches on any of the criteria, add .success
 */
 
 "use strict";
