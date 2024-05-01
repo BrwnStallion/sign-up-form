@@ -35,3 +35,29 @@ signupDiv.addEventListener('focusin', (e) => {
     };
 });
 
+
+// Grab password input parent div element
+const pwrdDiv = document.querySelector('.password');
+
+// Array for new pwrd reqmt elements
+const pwrdReqDivs = [];
+pwrdReqDivs.length = 3;
+
+for (let i = 0; i < 3; i++) {
+  pwrdReqDivs[i] = document.createElement('div');
+};
+
+pwrdReqDivs[0].textContent = 'At least 8 characters';
+pwrdReqDivs[1].textContent = 'At least 1 capital letter';
+pwrdReqDivs[2].textContent = 'At least 1 number';
+
+pwrdReqDivs.forEach((div) => {
+  pwrdDiv.appendChild(div);
+});
+
+
+// Grab confirmation element, create & append match rqmt element
+const pwrdConfDiv = document.querySelector('.password-confirmation');
+const matchDiv = document.createElement('div');
+matchDiv.textContent = 'Passwords must match';
+pwrdConfDiv.appendChild(matchDiv);
