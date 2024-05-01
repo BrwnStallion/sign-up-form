@@ -19,6 +19,7 @@
           each rqmt
    - If content doesn't match on any of the criteria remove .success class
       - Toggle could cause problems because we want .success to not be present
+      - Should check for matching even if typing in the first password field
    - If content matches on any of the criteria, add .success
 */
 
