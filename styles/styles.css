@@ -110,12 +110,14 @@ h1, h2, h3, h4, h5 {
     --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     
-    /* Variables */
+    /* ----------------------- Variables ---------------------------- */
+    /* Fonts */
     --fontClr: rgb(198 198 198);
     --fontSizeMain: 1.2rem;
     --fontSizeLabel: .9rem;
     --fontSizeCredits: .8rem;
     --fontSizeInput: 1rem;
+    /* Colors */
     --clrGold01: rgb(132 103 73);
     --clrGold02: rgb(109 84 62);
     --clrGold03: rgb(57 60 53);
@@ -128,7 +130,9 @@ h1, h2, h3, h4, h5 {
     --clrValid: rgba(139, 195, 74, 0.8);
     --clrValidCheck: rgb(0, 255, 0);
     --clrNormalBrdr: rgba(94, 94, 94, 0.5);
-    --clrFocusBrdr: rgba(105, 186, 252, 0.644);
+    --clrFocusBrdr01: rgba(80, 214, 255, 0.76);
+    --clrFocusBrdr02: rgba(122, 122, 122, 0.74);
+    /* Sizes */
     --borderRadius: 4px;
     --borderThick: 3px;
     --inputWidth: max(12rem, 20vw);
@@ -270,20 +274,20 @@ body {
                         padding: var(--inputPadTop) .6rem var(--inputPadBtm);
 
                         background-color: rgb(255 255 255);
-                        border: var(--borderThick) solid var(--clrNormalBrdr);
+                        border: var(--borderThick) solid var(--clrGold03);
                         border-radius: var(--borderRadius);
-                        box-shadow: inset 1px 1px 3px rgb(184 184 184);
+                        box-shadow: inset 1px 1px 3px rgb(185 185 185);
                         font-size: var(--fontSizeInput);
 
                         &:hover,
                         &:focus {
-                            background-color: rgb(216, 216, 216);
+                            background-color: rgb(224, 224, 224);
                         }
 
                         &:focus {
                             outline: none;
                             border: var(--borderThick)
-                                solid var(--clrFocusBrdr);
+                                solid var(--clrFocusBrdr01);
                         }
                         
                         & + span {
