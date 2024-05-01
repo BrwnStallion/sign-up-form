@@ -20,6 +20,9 @@
    - If content doesn't match on any of the criteria remove .success class
       - Toggle could cause problems because we want .success to not be present
       - Should check for matching even if typing in the first password field
+      - Need robust handling for if confirmation field is typed into first
+        and therefore only the matching rqmt text is added to the DOM. The 
+        toggling function has issues because the array is length 1 and not 4.
    - If content matches on any of the criteria, add .success
 */
 
