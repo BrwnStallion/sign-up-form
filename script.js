@@ -76,7 +76,6 @@ function toggleSuccessClass(divNumber, direction) {
     if (divNumber >= 0 && divNumber < 4) {
         const allRqmtDivs = document
             .querySelectorAll('.signup-fields > div div');
-        console.log(allRqmtDivs);
 
         switch (direction) {
             case 1:
@@ -103,22 +102,18 @@ addRqmtDivs();
 addMatchDiv();
 
 signupDiv.addEventListener('keyup', (e) => {
-    if (e.target.id === 'password') {
 
-        // Get the value in the field
-        let fieldValue = e.target.value;
+    const pwrdValue = document.querySelector('#password').value;
+    const confirmValue = document.querySelector('#password-conf').value;
+
+    if (e.target.id === 'password' || e.target.id === 'password-conf') {
 
         // Check if the values match against the regex requirement
 
-        // Check if confirm field matches (if going back and editing)
+        
+        // Check if pwrd value matches confirm value
         // Only do this if confirm field is not blank
-
-    } else if (e.target.id ==='password-conf') {
-        // Get the value in the field
-        let fieldValue = e.target.value;
-
-        // Check if the value matches what's in the password field
-        if (fieldValue === document.querySelector('#password').value) {
+        if (pwrdValue === confirmValue && confirmValue !== '') {
 
             // Show success because they match
             toggleSuccessClass(3,1);
