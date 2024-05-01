@@ -59,6 +59,19 @@ function addMatchDiv() {
   pwrdConfDiv.appendChild(matchDiv);
 }
 
+function addSuccessClass(divNumber) {
+  // Adds .success class to specified password rqmt div
+  // Note: this doesn't create duplicate classes
+
+  /* divNumber ranges from 0 to 4, correlating to which of the 4 possible divs
+  needs to be changed to success */
+
+  if (divNumber >= 0 && divNumber < 4) {
+    const allRqmtDivs = document.querySelectorAll('.signup-fields > div div');
+    allRqmtDivs[divNumber].classList.add('success');
+  };
+}
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Execution ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 const signupDiv = document.querySelector('.signup-section');
@@ -69,5 +82,4 @@ signupDiv.addEventListener('focusin', (e) => {
 });
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Testing ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
