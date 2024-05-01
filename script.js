@@ -59,16 +59,28 @@ function addMatchDiv() {
   pwrdConfDiv.appendChild(matchDiv);
 }
 
-function addSuccessClass(divNumber) {
-  // Adds .success class to specified password rqmt div
+function toggleSuccessClass(divNumber, direction) {
+  // Add/remove .success class to specified password rqmt div
   // Note: this doesn't create duplicate classes
 
-  /* divNumber ranges from 0 to 4, correlating to which of the 4 possible divs
-  needs to be changed to success */
+  /*
+  divNumber ranges from 0 to 3, correlating to which of the 4 possible divs
+  needs to be changed to success.
+  'direction' is 0 or 1 corresponding to add or remove
+  */
 
   if (divNumber >= 0 && divNumber < 4) {
     const allRqmtDivs = document.querySelectorAll('.signup-fields > div div');
-    allRqmtDivs[divNumber].classList.add('success');
+    console.log(allRqmtDivs);
+
+    switch (direction) {
+      case 1:
+        allRqmtDivs[divNumber].classList.add('success');
+      break;
+      case 0:
+        allRqmtDivs[divNumber].classList.remove('success');
+      break;
+    };
   };
 }
 
@@ -82,4 +94,33 @@ signupDiv.addEventListener('focusin', (e) => {
 });
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Testing ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+addRqmtDivs();
+addMatchDiv();
 
+signupDiv.addEventListener('keyup', (e) => {
+  if (e.target.id === 'password') {
+    
+    // Get the value in the field
+    let fieldValue = e.target.value;
+
+    // Check if the values match against the regex requirement
+  } else if (e.target.id ==='password-conf') {
+    // Get the value in the field
+    let fieldValue = e.target.value;
+
+    // Check if the value matches what's in the password field
+    if (fieldValue === document.querySelector('#password').value) {
+      console.log('same value');
+      // Show success because they match
+      toggleSuccessClass(3,1);
+
+    } else {
+      
+      // Otherwise remove success class (whether it's present or not)
+      toggleSuccessClass(3,0);
+
+    };
+  };
+});
+
+const inputElement = document.querySelector('#password');
