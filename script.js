@@ -98,7 +98,7 @@ signupDiv.addEventListener('focusin', (e) => {
 });
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Testing ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-addRqmtDivs();
+// addRqmtDivs();
 addMatchDiv();
 
 signupDiv.addEventListener('keyup', (e) => {
@@ -110,18 +110,29 @@ signupDiv.addEventListener('keyup', (e) => {
 
         // Check if the values match against the regex requirement
 
-        
-        // Check if pwrd value matches confirm value
-        // Only do this if confirm field is not blank
-        if (pwrdValue === confirmValue && confirmValue !== '') {
+
+        let bothFieldsBlank = confirmValue !== '' && pwrdValue !== '';
+
+        /*
+        Check if pwrd value matches confirm value. Only do this if the fields
+        are not blank
+        */
+        if (pwrdValue === confirmValue && !bothFieldsBlank) {
 
             // Show success because they match
             toggleSuccessClass(3,1);
 
-        } else {
+        } else if (pwrdValue !== confirmValue && !bothFieldsBlank) {
 
-            // Otherwise remove success class (whether it's present or not)
-            toggleSuccessClass(3,0);
+            /*
+            Grab the index of the last div (which is the matching div)
+            Need to do this because the first 3 divs might not be created
+            */
+            const allRqmtDivs = document
+            .querySelectorAll('.signup-fields > div div');
+
+            // Remove success class (whether it's present or not)
+            toggleSuccessClass(allRqmtDivs.length - 1,0);
 
         };
     };
