@@ -122,12 +122,30 @@ signupDiv.addEventListener('keyup', (e) => {
     if (e.target.id === 'password' || e.target.id === 'password-conf') {
 
         // Check if the values match against the regex requirement
+        if (e.target.id === 'password') {
+            
+            // Array with the 3 regex criteria for pwrd rqmts
+            const regex = [];
+            regex[0] = /[\w ]{8,}/g;
+            regex[1] = /[A-Z]/g;
+            regex[2] = /\d/g;
 
+            // Iterate through array and match against pwrd field content
+            regex.forEach( (expression, index) => {
+                if (pwrdValue.match(expression) !== null) {
+                    toggleSuccessClass(index, 1);
+                } else {
+                    toggleSuccessClass(index, 0);
+                };
+            });
+        };
 
+        // Var for if any pwrd field is blank. Makes if conditions more readable
         let anyFieldBlank = confirmValue === '' || pwrdValue === '';
         console.log(anyFieldBlank);
         console.log(pwrdValue);
         console.log(confirmValue);
+
         /*
         Check if pwrd value matches confirm value. Only do this if the fields
         are not blank
