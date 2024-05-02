@@ -113,7 +113,7 @@ signupDiv.addEventListener('focusin', (e) => {
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Testing ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-signupDiv.addEventListener('keyup', (e) => {
+signupDiv.addEventListener('input', (e) => {
 
     const pwrdValue = document.querySelector('#password').value;
     const confirmValue = document.querySelector('#password-conf').value;
