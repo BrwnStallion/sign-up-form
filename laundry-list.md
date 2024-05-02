@@ -1,14 +1,10 @@
 Sign-Up Form Laundry List
 
 05/02/24
-- Add JS password verification (for same password in each field)
 - Consider adding required/optional tag/note to fields markup/CSS for UX
-- Consider adding password guidance popup markup
-- Can use JS to apply the styles if conditions are met (regex would be in
-      JS)
-        - JS can apply success or fail to the relevant div
-- Fix match verification not working if only one character
 - Add placeholder for phone number input field
+- Add JS logic to prevent user from submitting empty form, since required
+  attribute is applied only after focusing on a field
 
 05/01/24
 - Add JS password verification (for same password in each field)
