@@ -92,14 +92,26 @@ function toggleSuccessClass(divNumber, direction) {
 
 const signupDiv = document.querySelector('.signup-fields');
 signupDiv.addEventListener('focusin', (e) => {
+    
+    // Add required attribute if appropriate input focused
     if (e.target.nodeName === 'INPUT' && e.target.id !== 'phone') {
         e.target.setAttribute('required', 'required');
+    };
+
+    // Add pwrd rqmts if pwrd field focused, and rqmts not there already
+    if (e.target.id === 'password'
+        && document.querySelectorAll('.password div').length === 0) {
+        addRqmtDivs();
+    };
+
+    // Add match rqmt if confirmation field focused, and rqmt not there already
+    if (e.target.id === 'password-conf' &&
+        document.querySelectorAll('.password-confirmation div').length === 0) {
+        addMatchDiv();
     };
 });
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Testing ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// addRqmtDivs();
-addMatchDiv();
 
 signupDiv.addEventListener('keyup', (e) => {
 
@@ -139,5 +151,3 @@ signupDiv.addEventListener('keyup', (e) => {
         };
     };
 });
-
-const inputElement = document.querySelector('#password');
