@@ -364,11 +364,6 @@ body {
                             color: red;
                         }
 
-                        &.fail::before {
-                            content: '✖';
-                            color: red;
-                        }
-
                         &.success::before {
                             content: '✓';
                             color: var(--clrValidCheck);
