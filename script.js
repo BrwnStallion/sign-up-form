@@ -133,9 +133,13 @@ signupDiv.addEventListener('keyup', (e) => {
             // Iterate through array and match against pwrd field content
             regex.forEach( (expression, index) => {
                 if (pwrdValue.match(expression) !== null) {
+                    // Add success class if regex match returns something
                     toggleSuccessClass(index, 1);
+
                 } else {
+                    // Remove success class if regex match returns null
                     toggleSuccessClass(index, 0);
+                    
                 };
             });
         };
@@ -157,12 +161,21 @@ signupDiv.addEventListener('keyup', (e) => {
             Grab the index of the last div (which is the matching div)
             Need to do this because the first 3 divs might not be created
             */
-            const allRqmtDivs = document
-            .querySelectorAll('.signup-fields > div div');
+           const allRqmtDivs = document
+           .querySelectorAll('.signup-fields > div div');
+           
+           // Remove success class (whether it's present or not)
+            if (allRqmtDivs.length === 4) {
+                // This case is if all rqmt divs are loaded
 
-            // Remove success class (whether it's present or not)
-            toggleSuccessClass(allRqmtDivs.length - 1,0);
+                toggleSuccessClass(3,0);
 
+            } else if (allRqmtDivs.length === 1) {
+                // This case is if only the matching rqmt div is loaded
+
+                toggleSuccessClass(0,0);
+
+            };
         };
     };
 });
