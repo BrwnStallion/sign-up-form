@@ -299,7 +299,6 @@ body {
                         &[required='required']:invalid {
                             /* These styles only affect when JS has added
                             'required' to the input node */
-                            color: var(--clrInvalidFont);
 
                             & + span::before {
                                 content: '✖';
