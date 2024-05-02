@@ -1,5 +1,13 @@
 Sign-Up Form Laundry List
 
+05/02/24 (rqmt_js)
+- Add JS password verification (for same password in each field)
+- Consider adding password guidance popup markup
+- Can use JS to apply the styles if conditions are met (regex would be in
+      JS)
+        - JS can apply success or fail to the relevant div
+- Fix match verification not working if only one character
+
 04/30/24
 - Add regex pattern for passwords
 - Figure out why email pattern accepts input w/o a domain
