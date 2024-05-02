@@ -142,9 +142,6 @@ signupDiv.addEventListener('keyup', (e) => {
 
         // Var for if any pwrd field is blank. Makes if conditions more readable
         let anyFieldBlank = confirmValue === '' || pwrdValue === '';
-        console.log(anyFieldBlank);
-        console.log(pwrdValue);
-        console.log(confirmValue);
 
         /*
         Check if pwrd value matches confirm value. Only do this if the fields
@@ -155,7 +152,7 @@ signupDiv.addEventListener('keyup', (e) => {
             // Show success because they match
             toggleSuccessClass(3,1);
 
-        } else if (pwrdValue !== confirmValue && !anyFieldBlank) {
+        } else if (pwrdValue !== confirmValue) {
             /*
             Grab the index of the last div (which is the matching div)
             Need to do this because the first 3 divs might not be created
