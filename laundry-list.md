@@ -2,11 +2,26 @@ Sign-Up Form Laundry List
 
 05/02/24 (rqmt_js)
 - Add JS password verification (for same password in each field)
+    - COMPLETE
 - Consider adding password guidance popup markup
+    - COMPLETE
 - Can use JS to apply the styles if conditions are met (regex would be in
       JS)
         - JS can apply success or fail to the relevant div
+    - COMPLETE
 - Fix match verification not working if only one character
+    - This might be acceptable. Can add something that only shows matching if
+      the 3 rqmts are also met?
+    - COMPLETE
+- Adjust styles to stop the extra valid/invalid feedback on pwrd fields
+    - Removed spans from markup
+    - COMPLETE
+- Remove red font color from invalid styles
+    - COMPLETE
+- Figure out why number rqmt isn't updating always
+    - COMPLETE
+- Make pwrd fields be valid when JS says they're valid
+    - 
 
 04/30/24
 - Add regex pattern for passwords
