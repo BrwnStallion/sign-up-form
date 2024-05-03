@@ -115,8 +115,10 @@ signupDiv.addEventListener('focusin', (e) => {
 
 signupDiv.addEventListener('input', (e) => {
 
-    const pwrdValue = document.querySelector('#password').value;
-    const confirmValue = document.querySelector('#password-conf').value;
+    const pwrdField = document.querySelector('#password');
+    const pwrdValue = pwrdField.value;
+    const confirmField = document.querySelector('#password-conf');
+    const confirmValue = confirmField.value;
 
     // Do rqmt checks only if the password fields are being typed in
     if (e.target.id === 'password' || e.target.id === 'password-conf') {
@@ -130,18 +132,41 @@ signupDiv.addEventListener('input', (e) => {
             regex[1] = /[A-Z]/g;
             regex[2] = /\d/g;
 
+            // Array for success to be logged to
+            const results = [];
+
             // Iterate through array and match against pwrd field content
             regex.forEach( (expression, index) => {
                 if (pwrdValue.match(expression) !== null) {
                     // Add success class if regex match returns something
                     toggleSuccessClass(index, 1);
+                    results[index] = 1;
 
                 } else {
                     // Remove success class if regex match returns null
                     toggleSuccessClass(index, 0);
+                    results[index] = 0;
                     
                 };
             });
+
+            // Sum the results array to see if all rqmts passed
+            const resultsSum = results.reduce((total, result) => {
+                return total + result;
+            }, 0);
+
+            // Set validity for pwrd field based on results array
+            if (resultsSum === 3) {
+                
+                // Set field to valid
+                pwrdField.setCustomValidity('');
+
+            } else {
+                
+                // Set field to invalid
+                pwrdField.setCustomValidity('Please fill out this field.');
+
+            };
         };
 
         // Var for if any pwrd field is blank. Makes if conditions more readable
@@ -156,15 +181,18 @@ signupDiv.addEventListener('input', (e) => {
             // Show success because they match
             toggleSuccessClass(3,1);
 
+            // Set field to valid
+            confirmField.setCustomValidity('');
+
         } else if (pwrdValue !== confirmValue) {
             /*
             Grab the index of the last div (which is the matching div)
             Need to do this because the first 3 divs might not be created
             */
-           const allRqmtDivs = document
-           .querySelectorAll('.signup-fields > div div');
+            const allRqmtDivs = document
+            .querySelectorAll('.signup-fields > div div');
            
-           // Remove success class (whether it's present or not)
+            // Remove success class (whether it's present or not)
             if (allRqmtDivs.length === 4) {
                 // This case is if all rqmt divs are loaded
 
@@ -176,6 +204,10 @@ signupDiv.addEventListener('input', (e) => {
                 toggleSuccessClass(0,0);
 
             };
+
+            // Set field to invalid
+            confirmField.setCustomValidity('Please fill out this field');
+
         };
     };
 });
