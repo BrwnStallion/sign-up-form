@@ -212,8 +212,6 @@ signupDiv.addEventListener('input', (e) => {
     };
 });
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Testing ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 document.querySelector('button.create').addEventListener('click', (e) => {
     /*
     Listener to stop user from submitting the form before they've clicked into
@@ -237,12 +235,15 @@ document.querySelector('button.create').addEventListener('click', (e) => {
     if (allReqdFieldBlank) {
         // User tried to submit form without entering anything in reqd fields
         
-        // Set an error popup on the first reqd field to alert user
-        document.querySelector('#first-name')
-        .setCustomValidity('Please fill out required fields.');
+        // Set all the not-yet-reqd fields to reqd
+        for (let prop in reqdElements) {
+            reqdElements[prop].setAttribute('required', 'required');
+        };
 
-        // Stop the button from being clicked
-        // e.preventDefault();
-
+        // Add the rqmt divs on the pwrd fields too
+        addRqmtDivs();
+        addMatchDiv();
     };
 });
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Testing ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
