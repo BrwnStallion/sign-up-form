@@ -1,5 +1,19 @@
 Sign-Up Form Laundry List
 
+05/03/24 (main)
+- Consider adding required/optional tag/note to fields markup/CSS for UX
+    - COMPLETE
+- Add placeholder for phone number input field
+    - Can add JS that applies invalid attribute if content in the field doesn't
+      match requirements
+    - This might be possible with just html regex pattern
+    - COMPLETE
+- Add JS logic to prevent user from submitting empty form, since required
+  attribute is applied only after focusing on a field
+    - COMPLETE
+- Investigate console error on the email regex
+    - COMPLETE
+
 05/02/24 (main)
 - Consider adding required/optional tag/note to fields markup/CSS for UX
 - Add placeholder for phone number input field
