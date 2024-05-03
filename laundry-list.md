@@ -1,22 +1,11 @@
 Sign-Up Form Laundry List
 
-05/02/24
+05/02/24 (main)
 - Consider adding required/optional tag/note to fields markup/CSS for UX
 - Add placeholder for phone number input field
 - Add JS logic to prevent user from submitting empty form, since required
   attribute is applied only after focusing on a field
 
-05/01/24
-- Add JS password verification (for same password in each field)
-- Consider adding required/optional tag/note to fields markup/CSS for UX
-- Consider adding password guidance popup markup
-- Can use JS to apply the styles if conditions are met (regex would be in
-      JS)
-        - JS can apply success or fail to the relevant div
-- Rework focus border to make its colors more consistent with the palate
-- Increase the line spacing maybe for the intro text
-    - COMPLETE
-- Add placeholder for phone number input field
 05/02/24 (rqmt_js)
 - Add JS password verification (for same password in each field)
     - COMPLETE
@@ -39,7 +28,18 @@ Sign-Up Form Laundry List
     - COMPLETE
 - Make pwrd fields be valid when JS says they're valid
     - COMPLETE
-- Don't allow form submission if the mandatory fields aren't filled
+
+05/01/24
+- Add JS password verification (for same password in each field)
+- Consider adding required/optional tag/note to fields markup/CSS for UX
+- Consider adding password guidance popup markup
+- Can use JS to apply the styles if conditions are met (regex would be in
+      JS)
+        - JS can apply success or fail to the relevant div
+- Rework focus border to make its colors more consistent with the palate
+- Increase the line spacing maybe for the intro text
+    - COMPLETE
+- Add placeholder for phone number input field
 
 04/30/24
 - Add regex pattern for passwords
