@@ -21,7 +21,8 @@ Sign-Up Form Laundry List
 - Figure out why number rqmt isn't updating always
     - COMPLETE
 - Make pwrd fields be valid when JS says they're valid
-    - 
+    - COMPLETE
+- Don't allow form submission if the mandatory fields aren't filled
 
 04/30/24
 - Add regex pattern for passwords
