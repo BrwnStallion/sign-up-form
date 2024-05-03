@@ -92,6 +92,7 @@ function toggleSuccessClass(divNumber, direction) {
 
 const signupDiv = document.querySelector('.signup-fields');
 signupDiv.addEventListener('focusin', (e) => {
+    // Listener to alter DOM based off what field is focused on
     
     // Add required attribute if appropriate input focused
     if (e.target.nodeName === 'INPUT' && e.target.id !== 'phone') {
@@ -112,6 +113,7 @@ signupDiv.addEventListener('focusin', (e) => {
 });
 
 signupDiv.addEventListener('input', (e) => {
+    // Listener to update the 4 pwrd rqmts as the user is entering content
 
     const pwrdField = document.querySelector('#password');
     const pwrdValue = pwrdField.value;
@@ -204,10 +206,43 @@ signupDiv.addEventListener('input', (e) => {
             };
 
             // Set field to invalid
-            confirmField.setCustomValidity('Please fill out this field');
+            confirmField.setCustomValidity('Please fill out this field.');
 
         };
     };
 });
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Testing ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+document.querySelector('button.create').addEventListener('click', (e) => {
+    /*
+    Listener to stop user from submitting the form before they've clicked into
+    any fields, meaning those fields haven't become required yet
+    */
+
+    // Variables for content of 'required' fields (they may not yet be reqd)
+    const reqdElements = {
+        firstName: document.querySelector('#first-name'),
+        lastName: document.querySelector('#last-name'),
+        email: document.querySelector('#email'),
+        pwrd: document.querySelector('#password'),
+        confirmPwrd: document.querySelector('#password-conf'),
+    };
+    
+    // If every required field is blank. Makes the 'if' more readable
+    let allReqdFieldBlank = reqdElements.firstName.value === ''
+    && reqdElements.lastName.value === '' && reqdElements.email.value === ''
+    && reqdElements.pwrd.value === '' && reqdElements.confirmPwrd.value === '';
+    
+    if (allReqdFieldBlank) {
+        // User tried to submit form without entering anything in reqd fields
+        
+        // Set an error popup on the first reqd field to alert user
+        document.querySelector('#first-name')
+        .setCustomValidity('Please fill out required fields.');
+
+        // Stop the button from being clicked
+        // e.preventDefault();
+
+    };
+});
