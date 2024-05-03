@@ -111,8 +111,6 @@ signupDiv.addEventListener('focusin', (e) => {
     };
 });
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Testing ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 signupDiv.addEventListener('input', (e) => {
 
     const pwrdField = document.querySelector('#password');
@@ -211,3 +209,5 @@ signupDiv.addEventListener('input', (e) => {
         };
     };
 });
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Testing ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
