@@ -256,8 +256,19 @@ body {
                 & h4 {
                     /* To make the text take up the whole row */
                     width: 100%;
-                    margin-bottom: 1rem;
+                    margin-bottom: 0.4rem;
+
+                    & + p {
+                        /* Style for <p> right after <h4> */
+                        min-width: 100%;
+                        margin-top: 0rem;
+
+                        font-size: var(--fontSizeLabel);
+                        font-style: italic;
+                    }
                 }
+
+                
 
                 & > div {
                     /* Styles for the divs that contain labels & inputs */
