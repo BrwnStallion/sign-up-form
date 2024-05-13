@@ -141,7 +141,7 @@ h1, h2, h3, h4, h5 {
     --inputPadBtm: 0.8rem;
 }
 
-/* Nazi germany style font / blackletter */
+/* Intimidating font / blackletter */
 @font-face {
     font-family: bokor;
     src: url(fonts/Bokor-Regular.ttf);
